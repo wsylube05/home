@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>파스칼 삼각형</title>
+    <script>
+        function new_row(prev_row) {
+            var nums1 = [];
+            var nums2 = [];
+            var i, j;
+
+            nums1[0] = 0;
+            nums1[1] = 1;
+            if (prev_row == 1) {
+                document.write(nums1[1]);
+            } else {
+                for (i = 1; i <= prev_row; i++) {
+                    for (j = 1; j <= i; j++) {
+                        if (j == i) {
+                            nums2[j] = 1;
+                            document.write(nums2[j]);
+                        } else {
+                            nums2[j] = nums1[j - 1] + nums1[j];
+                            document.write(nums2[j]);
+                            nums1[j] = nums2[j];
+                        }
+                    }
+                    document.write("<br>");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<script>
+    var prev_row = prompt("파스칼 삼각형의 높이는 ?", "")
+    new_row(prev_row);
+</script>
+
+</body>
+</html>

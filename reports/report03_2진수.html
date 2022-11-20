@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2진수를 16진수 만들기</title>
+</head>
+<body>
+<script>
+    var n = prompt("2진수를 입력하세요", "");
+    var m = parseInt(n,2);
+
+    var sixteen;
+    switch(m) {
+        case "0" :
+            sixteen = 0;
+            break;
+        case 1 :
+            sixteen = 1;
+            break;
+        case 2 :
+            sixteen = 2;
+            break;
+        case 3 :
+            sixteen = 3;
+            break;
+        case 4 :
+            sixteen = 4;
+            break;
+        case 5 :
+            sixteen = 5;
+            break;
+        case 6 :
+            sixteen = 6;
+            break;
+        case 7 :
+            sixteen = 7;
+            break;
+        case 8 :
+            sixteen = 8;
+            break;
+        case 9 :
+            sixteen = 9;
+            break;
+        case 10 :
+            sixteen = "A";
+            break;
+        case 11 :
+            sixteen = "B";
+            break;
+        case 12 :
+            sixteen = "C";
+            break;
+        case 13 :
+            sixteen = "D";
+            break;
+        case 14 :
+            sixteen = "E";
+            break;
+        case 15 :
+            sixteen = "F";
+            break;
+
+    }
+    if (m.toString().length>=8) {
+        document.write(n + "을 16진수로 바꾸면 " + sixteen.repeat(m / 4) + "입니다.");
+    } else {
+        document.write(n+"을 16진수로 바꾸면 "+sixteen+"입니다.");
+    }
+
+
+
+
+</script>
+</body>
+</html>
