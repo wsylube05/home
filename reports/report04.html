@@ -84,15 +84,14 @@ initial-scale=1">
                         } else {
                             nums2[j] = nums1[j - 1] + nums1[j];
                             document.getElementById("draw_area").innerHTML = nums2[j];
-                            nums1[j] = nums2[j];
                         }
+                        document.getElementById("draw_area").innerHTML = " " ;
+                    }
                         for (var k = 1; k <= i; k++) {
                             nums1[k] = nums2[k];
                         }
                     }
                 }
-
-        }
         }
 
 
